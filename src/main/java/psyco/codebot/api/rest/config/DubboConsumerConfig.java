@@ -9,7 +9,6 @@ import com.alibaba.dubbo.config.spring.ReferenceBean;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import psyco.user.center.client.service.UserService;
 
 
 /**
@@ -55,8 +54,4 @@ public class DubboConsumerConfig extends DubboConfig {
         return ref;
     }
 
-    @Bean
-    public ReferenceBean userService() {
-        return bean(UserService.class, usercenterVersion);
-    }
 }
